@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Chg-rX-78p">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-eU-xo5">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="home" id="CLr-4N-g3w">
+                                        <connections>
+                                            <action selector="homeButton:" destination="BYZ-38-t0r" id="xxC-x6-idW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rlK-oC-c1l"/>
+                                    <barButtonItem title="here" id="pFd-bu-fye">
+                                        <connections>
+                                            <action selector="hereButton:" destination="BYZ-38-t0r" id="yZU-zO-3xu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Pni-RA-Xhv"/>
+                                    <barButtonItem title="work" id="Ayc-K8-V3c">
+                                        <connections>
+                                            <action selector="workButton:" destination="BYZ-38-t0r" id="u03-LL-cBL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Chg-rX-78p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6tz-wX-13s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zYb-eU-xo5" secondAttribute="bottom" id="9hp-Xa-1rp"/>
+                            <constraint firstItem="zYb-eU-xo5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="FbK-Jz-SVA"/>
+                            <constraint firstItem="Chg-rX-78p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="qcc-tq-e4M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Chg-rX-78p" secondAttribute="trailing" constant="-16" id="sgp-YA-86u"/>
+                            <constraint firstItem="zYb-eU-xo5" firstAttribute="top" secondItem="Chg-rX-78p" secondAttribute="bottom" id="yaf-nb-HAW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zYb-eU-xo5" secondAttribute="trailing" constant="-16" id="z3b-nD-9uM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Chg-rX-78p" id="ruE-HZ-cof"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
