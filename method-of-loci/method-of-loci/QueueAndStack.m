@@ -10,10 +10,8 @@
 
 
 @interface DataStructures : NSObject
-@property (strong, nonatomic) NSMutableArray *myStack;
-@property (strong, nonatomic) NSMutableArray *myQueue;
-
-
+    @property (strong, nonatomic) NSMutableArray *myStack;
+    @property (strong, nonatomic) NSMutableArray *myQueue;
 
 @end
 
@@ -23,9 +21,18 @@
 //initializer
 -(instancetype) init {
     if (self = [super init]){
-        _myStack = [NSMutableArray arrayWithObjects:@"First", @"Second", @"Third",@"Fourth", nil];
-        _myQueue = [NSMutableArray arrayWithObjects:@"Fourth",@"Third", @"Second", @"First", nil];
-
+        _myStack = [NSMutableArray arrayWithObjects:@"Fourth",@"Third", @"Second", @"First", nil];
+        _myQueue = [NSMutableArray arrayWithObjects:@"First", @"Second", @"Third",@"Fourth", nil];
+        
+        [self displayQueue];
+        [self enqueue:@"fifth"];
+        [self peekQueue];
+        [self dequeue];
+        
+        [self displayStack];
+        [self push:@"derf"];
+        [self peekStack];
+        [self displayStack];
     }
     return self;
 }
@@ -52,7 +59,7 @@
     [_myStack removeLastObject];
     return returnString;
 }
-//MARK: PEEKS ===============================================================
+//MARK: PEEKS ===================================================================
 //peek the queue
 -(NSString*)peekQueue{
     NSString* returnString = [_myQueue firstObject];
