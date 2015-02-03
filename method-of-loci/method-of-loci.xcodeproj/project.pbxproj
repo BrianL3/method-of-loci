@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3423041A8182A400352372 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3423031A8182A400352372 /* DetailViewController.m */; };
 		FAD7E7471A80218700BEB4EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E7461A80218700BEB4EA /* main.m */; };
 		FAD7E74A1A80218700BEB4EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E7491A80218700BEB4EA /* AppDelegate.m */; };
 		FAD7E7501A80218700BEB4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD7E74E1A80218700BEB4EA /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA3423021A8182A300352372 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FA3423031A8182A400352372 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FAD7E7411A80218700BEB4EA /* method-of-loci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "method-of-loci.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD7E7451A80218700BEB4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD7E7461A80218700BEB4EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 		FAD7E7431A80218700BEB4EA /* method-of-loci */ = {
 			isa = PBXGroup;
 			children = (
+				FA3423021A8182A300352372 /* DetailViewController.h */,
+				FA3423031A8182A400352372 /* DetailViewController.m */,
 				FAD7E76A1A8021D100BEB4EA /* MainMapViewController.h */,
 				FAD7E76B1A8021D100BEB4EA /* MainMapViewController.m */,
 				FAD7E7481A80218700BEB4EA /* AppDelegate.h */,
@@ -231,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3423041A8182A400352372 /* DetailViewController.m in Sources */,
 				FAD7E7701A80324400BEB4EA /* QueueAndStack.m in Sources */,
 				FAD7E76C1A8021D100BEB4EA /* MainMapViewController.m in Sources */,
 				FAD7E74A1A80218700BEB4EA /* AppDelegate.m in Sources */,
@@ -427,6 +433,7 @@
 				FAD7E7661A80218700BEB4EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAD7E7671A80218700BEB4EA /* Build configuration list for PBXNativeTarget "method-of-lociTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +442,7 @@
 				FAD7E7691A80218700BEB4EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
