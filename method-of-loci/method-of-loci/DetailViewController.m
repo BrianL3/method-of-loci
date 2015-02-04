@@ -30,7 +30,6 @@
     NSString* longString = [NSString stringWithFormat:@"%f", self.annotation.coordinate.longitude];
     self.locationLabel.text = [NSString stringWithFormat:@"Your location is %@ by %@", latString, longString];
     //self.coordinateLabel.text = self.annotation.coordinate.latitude;
-    
 }
 
 //MARK: Add Reminder Button

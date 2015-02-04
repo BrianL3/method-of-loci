@@ -88,23 +88,17 @@
     
 }
 
-/*
- NSLog(@"reminder notification");
- NSDictionary *userInfo = notification.userInfo;
- CLCircularRegion *region = userInfo[@"reminder"];
- NSString *notificationName = notification.name;
- 
- MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
- 
- [self.mapView addOverlay:circleOverlay];
 
- 
- */
 
 //MARK: ReminderRegion Created
 -(void)reminderAdded:(NSNotification*) notification {
-
-
+    NSDictionary* reminderRegion = notification.userInfo;
+    
+    CLCircularRegion* region = reminderRegion[@"region"];
+    
+    MKCircle* regionOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
+    [self.mapView addOverlay:regionOverlay];
+    NSLog(@"region longitude was: %f", region.center.longitude);
 }
 
 //MARK:LocationManager  ==================================================================
@@ -119,6 +113,26 @@
 //    NSLog(@"latitide: %f and longitude: %f",location.coordinate.latitude, location.coordinate.longitude);
 //
 //}
+
+// When you enter a region, a local push should display that launches you to the detailVC of that region
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = @"region entered!";
+    localNotification.alertAction = @"region action";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+}
+
+//MARK: MAP OVERLAY
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
+    MKCircleRenderer* renderer = [[MKCircleRenderer alloc] initWithCircle:overlay];
+    renderer.alpha = 0.35;
+    renderer.fillColor = [UIColor colorWithRed:0.517647 green:0.72156 blue:1.0 alpha:1.0];
+    renderer.strokeColor = [UIColor brownColor];
+    return renderer;
+}
+
 
 //MARK: Gesture  ======================================================================================
 -(void) didLongPress:(id)sender{
