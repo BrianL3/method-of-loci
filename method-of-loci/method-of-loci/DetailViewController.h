@@ -12,5 +12,7 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) MKPointAnnotation * annotation;
+@property (strong, nonatomic) CLLocationManager * manager;
+
 
 @end

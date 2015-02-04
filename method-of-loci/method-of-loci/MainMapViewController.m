@@ -32,6 +32,8 @@
     // initiatize the gesture recognizer
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didLongPress:)];
     [self.mapView addGestureRecognizer: longPress];
+    //initialize the listener
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderRegionAdded" object:nil];
     
     // set the delegates
     self.locationManager.delegate = self;
@@ -86,6 +88,25 @@
     
 }
 
+/*
+ NSLog(@"reminder notification");
+ NSDictionary *userInfo = notification.userInfo;
+ CLCircularRegion *region = userInfo[@"reminder"];
+ NSString *notificationName = notification.name;
+ 
+ MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
+ 
+ [self.mapView addOverlay:circleOverlay];
+
+ 
+ */
+
+//MARK: ReminderRegion Created
+-(void)reminderAdded:(NSNotification*) notification {
+
+
+}
+
 //MARK:LocationManager  ==================================================================
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
@@ -137,8 +158,12 @@
 
 // when you press the annotation accessory
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
-    [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
     self.selectedAnnotation = view.annotation;
+    [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
+    
+}
+
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
     
 }
 
@@ -170,12 +195,13 @@
     [_mapView setRegion:region animated:true];
 }
 
-//MARK: SEGUe ================
+//MARK: SEGUE ================================================================================================
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]){
         DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
         detailVC.annotation = self.selectedAnnotation;
+        detailVC.manager = self.locationManager;
     }
 }
 
