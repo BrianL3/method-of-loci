@@ -9,6 +9,7 @@
 #import "MainMapViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "DetailViewController.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -16,7 +17,7 @@
 @interface MainMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
     @property (weak, nonatomic) IBOutlet MKMapView *mapView;
     @property (strong, nonatomic) CLLocationManager *locationManager;
-
+    @property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
 
 
 @end
@@ -137,6 +138,7 @@
 // when you press the annotation accessory
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
+    self.selectedAnnotation = view.annotation;
     
 }
 
@@ -166,6 +168,15 @@
     CLLocationCoordinate2D workCoordinate = CLLocationCoordinate2DMake(47.611299, -122.322770);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (workCoordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     [_mapView setRegion:region animated:true];
+}
+
+//MARK: SEGUe ================
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]){
+        DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
+        detailVC.annotation = self.selectedAnnotation;
+    }
 }
 
 

@@ -7,17 +7,22 @@
 //
 
 #import "DetailViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *coordinateLabel;
 
 @end
 
 @implementation DetailViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithRed:2.0 green:2.0 blue:2.0 alpha:1.0];
+    self.view.backgroundColor = [UIColor colorWithRed:0.517647 green:0.72156 blue:1.0 alpha:1.0];
+    //self.coordinateLabel.text = self.annotation.coordinate.latitude;
 }
 
 - (void)didReceiveMemoryWarning {
