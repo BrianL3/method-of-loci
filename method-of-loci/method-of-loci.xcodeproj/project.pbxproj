@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA3423041A8182A400352372 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3423031A8182A400352372 /* DetailViewController.m */; };
 		FA439EF41A82CFF90078D979 /* ReminderRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = FA439EF31A82CFF90078D979 /* ReminderRegion.m */; };
+		FAB6F9AA1A8433000029731D /* MiniMapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB6F9A91A8433000029731D /* MiniMapInterfaceController.m */; };
 		FAD7E7471A80218700BEB4EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E7461A80218700BEB4EA /* main.m */; };
 		FAD7E74A1A80218700BEB4EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E7491A80218700BEB4EA /* AppDelegate.m */; };
 		FAD7E7501A80218700BEB4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD7E74E1A80218700BEB4EA /* Main.storyboard */; };
@@ -18,6 +19,13 @@
 		FAD7E76C1A8021D100BEB4EA /* MainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E76B1A8021D100BEB4EA /* MainMapViewController.m */; };
 		FAD7E76E1A8026A800BEB4EA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD7E76D1A8026A800BEB4EA /* MapKit.framework */; };
 		FAD7E7701A80324400BEB4EA /* QueueAndStack.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E76F1A80324400BEB4EA /* QueueAndStack.m */; };
+		FAE05D611A840E8900528531 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE05D601A840E8900528531 /* InterfaceController.m */; };
+		FAE05D631A840E8900528531 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE05D621A840E8900528531 /* Images.xcassets */; };
+		FAE05D671A840E8900528531 /* method-of-loci WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = FAE05D661A840E8900528531 /* method-of-loci WatchKit App.app */; };
+		FAE05D6F1A840E8900528531 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE05D6D1A840E8900528531 /* Interface.storyboard */; };
+		FAE05D711A840E8900528531 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE05D701A840E8900528531 /* Images.xcassets */; };
+		FAE05D741A840E8900528531 /* method-of-loci WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAE05D5B1A840E8900528531 /* method-of-loci WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAE05D7E1A84119700528531 /* RegionTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE05D7D1A84119700528531 /* RegionTableRowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +36,42 @@
 			remoteGlobalIDString = FAD7E7401A80218600BEB4EA;
 			remoteInfo = "method-of-loci";
 		};
+		FAE05D681A840E8900528531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD7E7391A80218600BEB4EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE05D651A840E8900528531;
+			remoteInfo = "method-of-loci WatchKit App";
+		};
+		FAE05D721A840E8900528531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD7E7391A80218600BEB4EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE05D5A1A840E8900528531;
+			remoteInfo = "method-of-loci WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAE05D7B1A840E8900528531 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAE05D741A840E8900528531 /* method-of-loci WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA3423021A8182A300352372 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FA3423031A8182A400352372 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FA439EF31A82CFF90078D979 /* ReminderRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderRegion.m; sourceTree = "<group>"; };
+		FAB6F9A81A8433000029731D /* MiniMapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniMapInterfaceController.h; sourceTree = "<group>"; };
+		FAB6F9A91A8433000029731D /* MiniMapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiniMapInterfaceController.m; sourceTree = "<group>"; };
 		FAD7E7411A80218700BEB4EA /* method-of-loci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "method-of-loci.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD7E7451A80218700BEB4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD7E7461A80218700BEB4EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +87,17 @@
 		FAD7E76B1A8021D100BEB4EA /* MainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMapViewController.m; sourceTree = "<group>"; };
 		FAD7E76D1A8026A800BEB4EA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FAD7E76F1A80324400BEB4EA /* QueueAndStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueAndStack.m; sourceTree = "<group>"; };
+		FAE05D5B1A840E8900528531 /* method-of-loci WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "method-of-loci WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE05D5E1A840E8900528531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE05D5F1A840E8900528531 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		FAE05D601A840E8900528531 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		FAE05D621A840E8900528531 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAE05D661A840E8900528531 /* method-of-loci WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "method-of-loci WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE05D6C1A840E8900528531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE05D6E1A840E8900528531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FAE05D701A840E8900528531 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAE05D7C1A84119700528531 /* RegionTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionTableRowController.h; sourceTree = "<group>"; };
+		FAE05D7D1A84119700528531 /* RegionTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionTableRowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +110,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FAD7E7571A80218700BEB4EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE05D581A840E8900528531 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,6 +140,8 @@
 				FAD7E76D1A8026A800BEB4EA /* MapKit.framework */,
 				FAD7E7431A80218700BEB4EA /* method-of-loci */,
 				FAD7E75D1A80218700BEB4EA /* method-of-lociTests */,
+				FAE05D5C1A840E8900528531 /* method-of-loci WatchKit Extension */,
+				FAE05D6A1A840E8900528531 /* method-of-loci WatchKit App */,
 				FAD7E7421A80218700BEB4EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +151,8 @@
 			children = (
 				FAD7E7411A80218700BEB4EA /* method-of-loci.app */,
 				FAD7E75A1A80218700BEB4EA /* method-of-lociTests.xctest */,
+				FAE05D5B1A840E8900528531 /* method-of-loci WatchKit Extension.appex */,
+				FAE05D661A840E8900528531 /* method-of-loci WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +202,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FAE05D5C1A840E8900528531 /* method-of-loci WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6F9A81A8433000029731D /* MiniMapInterfaceController.h */,
+				FAB6F9A91A8433000029731D /* MiniMapInterfaceController.m */,
+				FAE05D7C1A84119700528531 /* RegionTableRowController.h */,
+				FAE05D7D1A84119700528531 /* RegionTableRowController.m */,
+				FAE05D5F1A840E8900528531 /* InterfaceController.h */,
+				FAE05D601A840E8900528531 /* InterfaceController.m */,
+				FAE05D621A840E8900528531 /* Images.xcassets */,
+				FAE05D5D1A840E8900528531 /* Supporting Files */,
+			);
+			path = "method-of-loci WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		FAE05D5D1A840E8900528531 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAE05D5E1A840E8900528531 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAE05D6A1A840E8900528531 /* method-of-loci WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				FAE05D6D1A840E8900528531 /* Interface.storyboard */,
+				FAE05D701A840E8900528531 /* Images.xcassets */,
+				FAE05D6B1A840E8900528531 /* Supporting Files */,
+			);
+			path = "method-of-loci WatchKit App";
+			sourceTree = "<group>";
+		};
+		FAE05D6B1A840E8900528531 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAE05D6C1A840E8900528531 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,10 +253,12 @@
 				FAD7E73D1A80218600BEB4EA /* Sources */,
 				FAD7E73E1A80218600BEB4EA /* Frameworks */,
 				FAD7E73F1A80218600BEB4EA /* Resources */,
+				FAE05D7B1A840E8900528531 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FAE05D731A840E8900528531 /* PBXTargetDependency */,
 			);
 			name = "method-of-loci";
 			productName = "method-of-loci";
@@ -180,6 +283,39 @@
 			productReference = FAD7E75A1A80218700BEB4EA /* method-of-lociTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FAE05D5A1A840E8900528531 /* method-of-loci WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE05D7A1A840E8900528531 /* Build configuration list for PBXNativeTarget "method-of-loci WatchKit Extension" */;
+			buildPhases = (
+				FAE05D571A840E8900528531 /* Sources */,
+				FAE05D581A840E8900528531 /* Frameworks */,
+				FAE05D591A840E8900528531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAE05D691A840E8900528531 /* PBXTargetDependency */,
+			);
+			name = "method-of-loci WatchKit Extension";
+			productName = "method-of-loci WatchKit Extension";
+			productReference = FAE05D5B1A840E8900528531 /* method-of-loci WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		FAE05D651A840E8900528531 /* method-of-loci WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE05D791A840E8900528531 /* Build configuration list for PBXNativeTarget "method-of-loci WatchKit App" */;
+			buildPhases = (
+				FAE05D641A840E8900528531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "method-of-loci WatchKit App";
+			productName = "method-of-loci WatchKit App";
+			productReference = FAE05D661A840E8900528531 /* method-of-loci WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +337,12 @@
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = FAD7E7401A80218600BEB4EA;
 					};
+					FAE05D5A1A840E8900528531 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FAE05D651A840E8900528531 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 				};
 			};
 			buildConfigurationList = FAD7E73C1A80218600BEB4EA /* Build configuration list for PBXProject "method-of-loci" */;
@@ -218,6 +360,8 @@
 			targets = (
 				FAD7E7401A80218600BEB4EA /* method-of-loci */,
 				FAD7E7591A80218700BEB4EA /* method-of-lociTests */,
+				FAE05D5A1A840E8900528531 /* method-of-loci WatchKit Extension */,
+				FAE05D651A840E8900528531 /* method-of-loci WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +381,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE05D591A840E8900528531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE05D631A840E8900528531 /* Images.xcassets in Resources */,
+				FAE05D671A840E8900528531 /* method-of-loci WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE05D641A840E8900528531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE05D6F1A840E8900528531 /* Interface.storyboard in Resources */,
+				FAE05D711A840E8900528531 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +426,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAE05D571A840E8900528531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB6F9AA1A8433000029731D /* MiniMapInterfaceController.m in Sources */,
+				FAE05D611A840E8900528531 /* InterfaceController.m in Sources */,
+				FAE05D7E1A84119700528531 /* RegionTableRowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -271,6 +443,16 @@
 			isa = PBXTargetDependency;
 			target = FAD7E7401A80218600BEB4EA /* method-of-loci */;
 			targetProxy = FAD7E75B1A80218700BEB4EA /* PBXContainerItemProxy */;
+		};
+		FAE05D691A840E8900528531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE05D651A840E8900528531 /* method-of-loci WatchKit App */;
+			targetProxy = FAE05D681A840E8900528531 /* PBXContainerItemProxy */;
+		};
+		FAE05D731A840E8900528531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE05D5A1A840E8900528531 /* method-of-loci WatchKit Extension */;
+			targetProxy = FAE05D721A840E8900528531 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -289,6 +471,14 @@
 				FAD7E7541A80218700BEB4EA /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		FAE05D6D1A840E8900528531 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAE05D6E1A840E8900528531 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,6 +616,66 @@
 			};
 			name = Release;
 		};
+		FAE05D751A840E8900528531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "method-of-loci WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAE05D761A840E8900528531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "method-of-loci WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAE05D771A840E8900528531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = method_of_loci_WatchKit_Extension;
+				INFOPLIST_FILE = "method-of-loci WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		FAE05D781A840E8900528531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = method_of_loci_WatchKit_Extension;
+				INFOPLIST_FILE = "method-of-loci WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -452,6 +702,24 @@
 			buildConfigurations = (
 				FAD7E7681A80218700BEB4EA /* Debug */,
 				FAD7E7691A80218700BEB4EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE05D791A840E8900528531 /* Build configuration list for PBXNativeTarget "method-of-loci WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE05D771A840E8900528531 /* Debug */,
+				FAE05D781A840E8900528531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE05D7A1A840E8900528531 /* Build configuration list for PBXNativeTarget "method-of-loci WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE05D751A840E8900528531 /* Debug */,
+				FAE05D761A840E8900528531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

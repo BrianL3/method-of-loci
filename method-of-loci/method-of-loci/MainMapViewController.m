@@ -18,6 +18,7 @@
     @property (weak, nonatomic) IBOutlet MKMapView *mapView;
     @property (strong, nonatomic) CLLocationManager *locationManager;
     @property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
+    @property (strong, nonatomic) NSMutableArray* regions;
 
 
 @end
@@ -86,19 +87,22 @@
         // pop an alert warning user that location services are not enabled
     }
     
+
 }
 
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:true];
+    NSLog(@"the number of regions currently in LocationManager is: %lu", (unsigned long)self.locationManager.monitoredRegions.count);
+}
 
 //MARK: ReminderRegion Created
 -(void)reminderAdded:(NSNotification*) notification {
     NSDictionary* reminderRegion = notification.userInfo;
     
     CLCircularRegion* region = reminderRegion[@"region"];
-    
+
     MKCircle* regionOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
     [self.mapView addOverlay:regionOverlay];
-    NSLog(@"region longitude was: %f", region.center.longitude);
 }
 
 //MARK:LocationManager  ==================================================================
@@ -217,6 +221,12 @@
         detailVC.annotation = self.selectedAnnotation;
         detailVC.manager = self.locationManager;
     }
+}
+
+//MARK: DEALLOC =========================================================================================
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
