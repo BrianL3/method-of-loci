@@ -39,9 +39,7 @@
     // set the delegates
     self.locationManager.delegate = self;
     self.mapView.delegate = self;
-
-    
-    // disable that rotate bullshit
+    // disable that rotate stuff
     self.mapView.rotateEnabled = false;
     
     // check if Location Services is enabled before proceeding
@@ -104,6 +102,8 @@
     MKCircle* regionOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
     [self.mapView addOverlay:regionOverlay];
 }
+
+
 
 //MARK:LocationManager  ==================================================================
 

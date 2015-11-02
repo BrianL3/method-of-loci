@@ -23,18 +23,19 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    CLLocationManager *locationManager = [CLLocationManager new];
-    NSSet *regions = locationManager.monitoredRegions;
-    self.regionsArray = regions.allObjects;
-
-    // display table of regions
-    [self.table setNumberOfRows:regions.count withRowType:@"REGION_ROW"];
-    NSInteger index = 0;
-    for (CLRegion *region in _regionsArray) {
-        RegionTableRowController *rowController = [self.table rowControllerAtIndex:index];
-        [rowController.regionNameLabel setText:region.identifier];
-        index++;
-    }
+    //Location manager removed in WatchKit 2? Replace with openParentApplication and get regions from there.
+//    CLLocationManager *locationManager = [CLLocationManager new];
+//    NSSet *regions = locationManager.monitoredRegions;
+//    self.regionsArray = regions.allObjects;
+//
+//    // display table of regions
+//    [self.table setNumberOfRows:regions.count withRowType:@"REGION_ROW"];
+//    NSInteger index = 0;
+//    for (CLRegion *region in _regionsArray) {
+//        RegionTableRowController *rowController = [self.table rowControllerAtIndex:index];
+//        [rowController.regionNameLabel setText:region.identifier];
+//        index++;
+//    }
 }
 
 -(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex{

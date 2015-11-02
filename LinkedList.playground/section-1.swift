@@ -2,7 +2,7 @@
 
 import UIKit
 
-var str = "Hello, playground"
+var str = "This is an example of a linked list"
 
 class LinkedList {
     var head : Node?
@@ -36,6 +36,26 @@ class LinkedList {
             currentNode.nextNode = node
         }
     }
+    
+    func removeNode(node: Node) -> String{
+        if self.head == nil{
+            return "The linked list is empty, node# \(node.data) cannot be removed"
+        }else{
+            var currentNode = self.head!
+            if currentNode == node{
+                self.head = nil
+            }
+            while (currentNode.nextNode != nil){
+                currentNode = currentNode.nextNode!
+            }
+            currentNode.nextNode = node
+        }
+        return "The node was removed."
+    }
+    
+    func findNode(node: Node) -> Bool{
+        return true
+    }
 }
 
 class Node {
@@ -68,6 +88,7 @@ linkedList.addAsHead(node2)
 println(linkedList.head?.data)
 
 linkedList.addAsTailLoop(node3)
+println(linkedList.head?.data)
 
 
 
